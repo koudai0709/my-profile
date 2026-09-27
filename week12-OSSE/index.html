@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Koudaiのポートフォリオ</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 font-sans leading-relaxed text-slate-700">
+  <header class="bg-blue-100 p-6 text-center">
+    <h1 class="my-4 text-3xl font-bold">こうだいのポートフォリオ</h1>
+    <p>学んだことを、カタチにする。</p>
+  </header>
+
+  <main class="mx-auto max-w-[800px] p-6">
+    <section class="mb-10">
+      <h2 class="mb-4 text-2xl font-bold text-blue-600">自己紹介</h2>
+      <p>こんにちは、こうだいです。POSSEでWeb制作を学んでいます。</p>
+      <p>使いやすいWebサイトを作れるようになることが目標です。</p>
+    </section>
+
+    <section class="mb-10">
+      <h2 class="mb-4 text-2xl font-bold text-blue-600">スキル</h2>
+      <ul class="space-y-4">
+        <li class="rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">HTML：ページの構造を作る</li>
+        <li class="rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">CSS：色やレイアウトを整える</li>
+        <li class="rounded-xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">JavaScript：ページに動きをつける</li>
+      </ul>
+    </section>
+
+    <section class="mb-10">
+      <h2 id="works-title" class="mb-4 text-2xl font-bold text-blue-600">作品紹介</h2>
+      <div class="splide [&_.splide__pagination__page.is-active]:bg-blue-600" aria-labelledby="works-title">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide rounded-xl bg-white px-14 pb-12 pt-6 text-center">
+              <h3 class="mb-4 text-xl font-bold">BMI計算機</h3>
+              <p>身長と体重からBMIを計算します。</p>
+              <a class="text-blue-600 underline" href="../week06-POSSE-/index.html">作品を見る</a>
+            </li>
+            <li class="splide__slide rounded-xl bg-white px-14 pb-12 pt-6 text-center">
+              <h3 class="mb-4 text-xl font-bold">ユーザー登録フォーム</h3>
+              <p>入力内容をチェックし、登録完了を表示します。</p>
+              <a class="text-blue-600 underline" href="../week09-OSSE-/index.html">作品を見る</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-blue-100 p-6 text-center">
+    <p>© 2026 こうだい / POSSE Week12</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    // 作品を1枚ずつ表示し、最後の次は最初に戻る
+    new Splide(".splide", {
+      type: "loop",
+      perPage: 1,
+    }).mount();
+  </script>
+</body>
+</html>
